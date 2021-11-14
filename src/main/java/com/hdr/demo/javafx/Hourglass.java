@@ -89,11 +89,10 @@ public class Hourglass extends Application {
             checkAndSetConfig(workConfig, restConfig);
             Runnable restJob = () -> {
                 try {
-                    System.err.println("start reset " + LocalDateTime.now());
                     Platform.runLater(() -> promptArea.setText("next work time: " + LocalDateTime.now().plusMinutes(restMins).format(DateTimeFormatter.ofPattern("HH:mm"))));
                     Runtime.getRuntime().exec("loginctl lock-session");
                     TimeUnit.MINUTES.sleep(restMins);
-                    System.err.println("end reset " + LocalDateTime.now());
+                    promptArea.setText("next rest time: " + LocalDateTime.now().plusMinutes(workMins).format(DateTimeFormatter.ofPattern("HH:mm")));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
