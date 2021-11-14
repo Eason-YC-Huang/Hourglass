@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="253.0" prefWidth="328.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hdr.demo.javafx.Hourglass">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox fx:id="timeConfigArea" prefHeight="25.0" prefWidth="300.0">
+        <children>
+            <Label prefHeight="25.0" prefWidth="50.0" text="Work:" textAlignment="CENTER" />
+            <TextField fx:id="workConfig" focusTraversable="false" prefHeight="25.0" prefWidth="50.0" text="40" />
+            <Label prefHeight="25.0" prefWidth="50.0" text="分钟" />
+            <Label prefHeight="25.0" prefWidth="50.0" text="Rest:" textAlignment="CENTER" />
+            <TextField fx:id="restConfig" focusTraversable="false" prefHeight="25.0" prefWidth="50.0" text="5" />
+            <Label prefHeight="25.0" prefWidth="50.0" text="分钟" />
+        </children>
+    </HBox>
+
+    <Button fx:id="statusBtn" onAction="#statusAction" prefHeight="49.0" prefWidth="102.0" text="start" />
+    <Label fx:id="promptArea" prefHeight="25.0" prefWidth="300.0" alignment="CENTER"/>
+</VBox>

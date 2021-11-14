@@ -23,7 +23,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.hdr.demo.demojavafx/com.hdr.demo.demojavafx.Hourglass</mainClass>
+              <mainClass>com.hdr.demo.demojavafx/com.hdr.demo.javafx.Hourglass</mainClass>
             </configuration>
           </execution>
         </executions>
@@ -40,7 +40,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.hdr.demo.demojavafx.Main</mainClass>
+                  <mainClass>com.hdr.demo.javafx.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

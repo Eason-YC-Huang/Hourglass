@@ -1,4 +1,4 @@
-package com.hdr.demo.demojavafx;
+package com.hdr.demo.javafx;
 
 import javafx.application.Application;
 public class Main {
