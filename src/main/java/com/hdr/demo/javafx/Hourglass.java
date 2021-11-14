@@ -90,7 +90,7 @@ public class Hourglass extends Application {
             Runnable restJob = () -> {
                 try {
                     Platform.runLater(() -> promptArea.setText("next work time: " + LocalDateTime.now().plusMinutes(restMins).format(DateTimeFormatter.ofPattern("HH:mm"))));
-                    Runtime.getRuntime().exec("loginctl lock-session");
+                    Runtime.getRuntime().exec(LockScreenCmd.getCommand());
                     TimeUnit.MINUTES.sleep(restMins);
                     promptArea.setText("next rest time: " + LocalDateTime.now().plusMinutes(workMins).format(DateTimeFormatter.ofPattern("HH:mm")));
                 } catch (Exception e) {
